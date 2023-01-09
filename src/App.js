@@ -1,13 +1,14 @@
 import "./App.css";
-import { Button } from "./stories/Button";
+import "./index.css";
+import store from "./lib/store";
+import { Provider } from "react-redux";
+import InboxScreen from "./components/InboxScreen";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Button backgroundColor={"white"} label={"Hello World"} size="large" />
-      </header>
-    </div>
+    <Provider store={store}>
+      <InboxScreen />{" "}
+    </Provider>
   );
 }
 
